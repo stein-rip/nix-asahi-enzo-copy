@@ -8,7 +8,7 @@
     ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
+  #boot.loader.systemd-boot.enable = true;
   # boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot";
 
@@ -54,19 +54,7 @@
     xkbVariant = "";
   };
 
-  nixpkgs.config.allowUnfreePredicate = pkg:
-
- # hardware.nvidia = {
- #   modesetting.enable = true;
- #   open = false;
-
- #   nvidiaSettings = true;
- #   package = config.boot.kernelPackages.nvidiaPackages.latest;
- # };
-
-  
-  # Configure console keymap
-  console.keyMap = "en-QUERTY";
+ nixpkgs.config.allowUnfreePredicate = pkg: true;
 
  # sound.enable = true;
  # hardware.pulseaudio.enable = false;
@@ -79,8 +67,8 @@
  # };
 
   # add /.local to $PATH
-  environment.variables={
-   NIXOS_OZONE_WL = "1";
+  environment.variables = {
+   #NIXOS_OZONE_WL = "1";
    PATH = [
      "\${HOME}/.local/bin"
      "\${HOME}/.config/rofi/scripts"
