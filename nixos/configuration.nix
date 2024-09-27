@@ -54,9 +54,11 @@
     xkbVariant = "";
   };
 
- nixpkgs.config.allowUnfreePredicate = pkg: true;
- system.allowUnsupportedSystem = true;
- 
+ nixpkgs.config 
+ {
+  allowUnfreePredicate = pkg: true;
+ allowUnsupportedS}ystem = true;
+};
 
  # sound.enable = true;
  # hardware.pulseaudio.enable = false;
