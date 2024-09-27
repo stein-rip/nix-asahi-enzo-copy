@@ -55,6 +55,8 @@
   };
 
  nixpkgs.config.allowUnfreePredicate = pkg: true;
+ system.allowUnsupportedSystem = true;
+ 
 
  # sound.enable = true;
  # hardware.pulseaudio.enable = false;
