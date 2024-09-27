@@ -32,6 +32,9 @@
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
+ environment.systemPackages = with pkgs; [
+  gcc  # Use gcc without multilib
+];
 
   time.timeZone = "America/Detroit";
   i18n.extraLocaleSettings = {
