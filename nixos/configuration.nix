@@ -8,7 +8,7 @@
     ];
 
   # Bootloader.
-  # boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.enable = true;
   # boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot";
 
@@ -54,17 +54,7 @@
     xkbVariant = "";
   };
 
- # NvidiaConfig
- # hardware.opengl = {
- #  enable = true;
- #  driSupport = true;
- #  driSupport32Bit = true;
- #};
-
   nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [
-    #  "#nvidia-x11"
-    ];
 
  # hardware.nvidia = {
  #   modesetting.enable = true;
