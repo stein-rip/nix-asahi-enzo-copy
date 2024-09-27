@@ -1,5 +1,4 @@
 { config, lib, pkgs, ... }:
-
 {
   imports = [ 
     ./hyprland-environment.nix
@@ -14,7 +13,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     systemdIntegration = true;
-    nvidiaPatches = true;
+   # nvidiaPatches = true;
     extraConfig = ''
 
     # Monitor
@@ -196,7 +195,7 @@
         '';
   };
 
-      home.file.".config/hypr/colors".text = ''
+ home.file.".config/hypr/colors".text = ''
 $background = rgba(1d192bee)
 $foreground = rgba(c3dde7ee)
 

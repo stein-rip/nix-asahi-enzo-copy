@@ -22,8 +22,8 @@ let
 
 in {
 nixosConfigurations = {
-    ssstein = lib.nixosSystem rec {
-      inherit system;
+    stein-rip = lib.nixosSystem rec {
+      system = "aarch64-linux";
       specialArgs = { inherit hyprland; };
       modules = [ 
         ./nixos/configuration.nix
