@@ -54,9 +54,8 @@
     xkbVariant = "";
   };
 
- nixpkgs.config.enable = 
+ nixpkgs.config = 
  {
-  enable = true;
   allowUnfreePredicate = pkg: true;
  allowUnsupportedSystem = true;
 };
