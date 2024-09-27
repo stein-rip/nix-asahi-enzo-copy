@@ -55,11 +55,11 @@
     pamixer
     mpc-cli
     tty-clock
-    exa
+    eza
     btop
     tokyo-night-gtk
 
-  ]) ++ (with pkgs.gnome; [ 
+  ]) ++ (with pkgs; [ 
     nautilus
     zenity
     gnome-tweaks
