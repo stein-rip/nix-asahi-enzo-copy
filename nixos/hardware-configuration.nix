@@ -11,7 +11,7 @@
   boot.initrd.availableKernelModules = [ "usb_storage" "sdhci_pci" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ ];
-  boot.extraModulePackages = [ ];
+  boot.extraModulePackages = [opt ];
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/ed18b23f-d18f-4319-aada-26365bd9a311";
