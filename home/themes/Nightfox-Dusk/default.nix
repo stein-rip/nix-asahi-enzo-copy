@@ -1,12 +1,4 @@
-{ lib
-, stdenvNoCC
-, fetchFromGitHub
-, gnome-themes-extra
-, gtk-engine-murrine
-}:
-stdenvNoCC.mkDerivation rec {
-  pname = "nightfox-gtk-theme";
-  version = "unstable-2022-12-09";
+
 
   src = fetchFromGitHub {
     owner = "Fausto-Korpsvart";
